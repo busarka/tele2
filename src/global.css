@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+ul,
+ul li {
+  list-style: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Exo 2';
+  src: url('../public/fonts/exo/Exo2-Thin.otf') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Exo 2';
+  src: url('../public/fonts/exo/Exo2-Light.otf') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Exo 2';
+  src: url('../public/fonts/exo/Exo2-Regular') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Exo 2';
+  src: url('../public/fonts/exo/Exo2-Medium.otf') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Exo 2';
+  src: url('../public/fonts/exo/Exo2-Bold.otf') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
