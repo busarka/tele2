@@ -6,7 +6,9 @@ interface ProductListProps {
   products: Product[];
 }
 
-const ProductList: React.FC<ProductListProps> = ({ products: initialProducts }) => {
+const ProductList: React.FC<ProductListProps> = ({
+  products: initialProducts,
+}) => {
   const [products, setProducts] = useState(initialProducts);
 
   const handleToggleSelect = (id: number) => {

@@ -10,22 +10,28 @@ interface ProductCardProps {
   onToggleSelect?: (id: number) => void;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product, onToggleSelect }) => {
+const ProductCard: React.FC<ProductCardProps> = ({
+  product,
+  onToggleSelect,
+}) => {
   const {
     isSelected,
     isHovered,
     hasBeenHoveredAfterSelect,
     handleMouseEnter,
     handleToggle,
-    handleMouseLeave
+    handleMouseLeave,
   } = useProductCardState(product, onToggleSelect);
 
   return (
-    <div className={`product-card-wrapper ${product.isOutOffStock ? 'product-card-wrapper--out-of-stock' : ''}`}>
+    <div
+      className={`product-card-wrapper ${product.isOutOffStock ? 'product-card-wrapper--out-of-stock' : ''}`}
+    >
       <div
         className={`product-card
       ${isSelected ? 'product-card--selected' : ''}
-      ${product.isOutOffStock ? 'product-card--out-of-stock' : ''}`} onClick={handleToggle}
+      ${product.isOutOffStock ? 'product-card--out-of-stock' : ''}`}
+        onClick={handleToggle}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -35,7 +41,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onToggleSelect }) =>
           loading="lazy"
           className={`product-card__image ${product.isOutOffStock ? 'out-of-stock' : ''}`}
         />
-        <CardHeader hasBeenHoveredAfterSelect={hasBeenHoveredAfterSelect} isHovered={isHovered} isSelected={isSelected} product={product}></CardHeader>
+        <CardHeader
+          hasBeenHoveredAfterSelect={hasBeenHoveredAfterSelect}
+          isHovered={isHovered}
+          isSelected={isSelected}
+          product={product}
+        ></CardHeader>
         <div className="product-card__footer">
           <span className="product-card__weight">{product.weight}</span>
           <span className="product-card__unit">{product.weightUnit}</span>
